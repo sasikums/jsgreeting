@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <style>
+#pic{
+display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+#msg{
+font-family: Impact;
+color: red;
+background-color:black;
+font-size:300%;
+}
+
+</style>
+
+    <body>
+
+        
+		<h1 id='heading' style="text-align:center">Urgent Message!!!!!</h1>
+        <img id='pic' onclick="chText()" height=200
+        src="http://www.clipartoday.com/_thumbs/034/P/Pigeon_tnb.png">
+		<h1 id="msg" style="text-align:center"></h1>
+
+        <script>
+			var step = 0;
+			
+			
+            function chText() {
+				document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBdDWk_Md0zVOiXPKWtajsAkaHhM-L7o3EKIi9OtPhDiVn7tlKZw')";
+				imglinks=["http://cdn.meme.am/instances/60913546.jpg",
+				"http://taintedink.com/wp-content/uploads/2012/07/go-to-hell-monotony-card.jpg",
+				"http://ih0.redbubble.net/image.27371129.1601/flat,800x800,075,t.u4.jpg",
+				"http://i1.wp.com/lovefunromance.com/wp-content/uploads/2013/06/Go-to-hell.jpg"];
+				document.getElementById('pic').src = imglinks[step] ;
+				
+				document.getElementById('heading').innerHTML = "";
+				document.getElementById('msg').innerHTML = "GTH Forever Moss!!!";
+				
+				if (step%2){
+					document.getElementById('msg').style.visibility='hidden';
+				}
+				else{
+					document.getElementById('msg').style.visibility='visible';
+				}
+				
+					
+				
+				
+                document.getElementById('pic').height = 500;
+                document.getElementById('pic').width = 500;
+				if (step<imglinks.length-1){
+					step++	;
+				}
+				else {
+					step=0;
+				}
+              setTimeout("chText()",1000);
+			  
+			
+            }
+        </script>
+
+    </body>
+
+</html>

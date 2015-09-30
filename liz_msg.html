@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <style>
+#pic{
+display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+</style>
+
+    <body>
+
+        
+		<h1 id='msg' style="text-align:center">Urgent Message!!!!!</h1>
+        <img id='pic' onclick="chText()" 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGkf_PmcYa-rrRtSXikpxpN-uRD_CR-H69qvxzxMRJPssmxsS">
+		<h1 id="lv" style="text-align:center"></h1>
+
+        <script>
+			var step = 0;
+            function chText() {
+				
+				imglinks=["https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTECXpNicC1ZlkqKtiFjauxBjtwUpfkHbPi33OR_cxkUsU6Iruq",
+				"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRjrE3958F5x65D0AVJVXqVMqyzYP-eE0NLkuIS1Ff8vmOkRN8j1g",
+				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaIYP7_q2jYBuKVH3xzGr5Ys6rVs1-Vrfo7FwiG5bCEYihpqN6",
+				"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTL9KjotuCa-5x6UcHC97jRx9sRdoCZevbdyLa2Hp-yqzrNXaYx9g"];
+				document.getElementById('pic').src = imglinks[step] ;
+				
+				document.getElementById('msg').innerHTML = "";
+				document.getElementById('lv').innerHTML = "To my darling Liz";
+                
+                document.getElementById('pic').height = 500;
+                document.getElementById('pic').width = 500;
+				if (step<imglinks.length-1){
+					step++	
+				}
+				else {
+					step=0
+				}
+              setTimeout("chText()",1000)  
+            }
+        </script>
+
+    </body>
+
+</html>
